@@ -51,11 +51,21 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jCheckBox2 = new javax.swing.JCheckBox();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        mnureset = new javax.swing.JMenuItem();
+        mnulink = new javax.swing.JMenuItem();
+        mnukilepes = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tippelő robotok");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("NAGY robot"));
 
         jLabel1.setText("A három kis robot számára kitalálandó szám:");
 
@@ -70,7 +80,7 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         jTextField2.setEditable(false);
         jTextField2.setText("1");
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel3.setText("Minimum érték:");
 
@@ -166,9 +176,9 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("KIS robotok"));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("HÁROM robot"));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -204,9 +214,7 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         jRadioButton3.setSelected(true);
         jRadioButton3.setText("Mindent mutat");
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
-
-        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("EGY robot"));
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -273,6 +281,40 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jMenu1.setText("Program");
+
+        mnureset.setText("Alapállapot");
+        jMenu1.add(mnureset);
+
+        mnulink.setText("Online help");
+        jMenu1.add(mnulink);
+
+        mnukilepes.setText("Kilépés");
+        mnukilepes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnukilepesActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnukilepes);
+        jMenu1.add(jSeparator1);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu4.setText("jmenu2");
+
+        jMenuItem1.setText("jMenuItem1");
+        jMenu4.add(jMenuItem1);
+
+        jMenuItem2.setText("jMenuItem2");
+        jMenu4.add(jMenuItem2);
+
+        jMenuItem3.setText("jMenuItem3");
+        jMenu4.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu4);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -297,6 +339,10 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mnukilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnukilepesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnukilepesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -344,6 +390,12 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -354,11 +406,15 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JMenuItem mnukilepes;
+    private javax.swing.JMenuItem mnulink;
+    private javax.swing.JMenuItem mnureset;
     // End of variables declaration//GEN-END:variables
 }
